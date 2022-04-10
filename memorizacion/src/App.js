@@ -35,6 +35,44 @@ function App() {
           </ul>
         </li>
       </ul>
+      <hr />
+      <h3>
+        <a
+          href="https://es.reactjs.org/docs/hooks-reference.html#usecallback"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          useCallback
+        </a>
+      </h3>
+      <ul>
+        <li>Memoriza una funcion para no volverla a definir en cada render</li>
+        <li>
+          Usalo siempre que se pase una función como <b>props</b> a un
+          componente memorizado
+        </li>
+        <li>
+          Usalo siempre que se pase una funcion como parametro a un efecto
+        </li>
+      </ul>
+      <hr />
+      <h3>
+        <a
+          href="https://es.reactjs.org/docs/hooks-reference.html#usememo"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          useMemo
+        </a>
+      </h3>
+      <ul>
+        <li>
+          Memoriza un valor calculado, es decir, el resultado de una función
+        </li>
+        <li>Genera propiedades computadas</li>
+        <li>Se usa en procesos pesados </li>
+      </ul>
+      <hr />
       <Contador />
     </div>
   );
