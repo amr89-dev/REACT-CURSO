@@ -6,7 +6,7 @@ import ThemeContext from "../context/ThemeContext";
 
 const HeaderContext = () => {
   const { theme, handleTheme } = useContext(ThemeContext);
-  const { language, texts, handleLanguage } = useContext(LanguageContext);
+  const { texts, handleLanguage } = useContext(LanguageContext);
   const { auth, handleAuth } = useContext(AuthContext);
 
   return (

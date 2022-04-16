@@ -44,7 +44,7 @@ const LanguageProvider = ({ children }) => {
     }
   };
 
-  const data = { language, texts, handleLanguage };
+  const data = { texts, handleLanguage };
   return (
     <LanguageContext.Provider value={data}>{children}</LanguageContext.Provider>
   );

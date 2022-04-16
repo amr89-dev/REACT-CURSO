@@ -1,10 +1,11 @@
 export const helpHttp = () => {
   const customFetch = (endpoint, options) => {
+    // Esto es un cabecera por default ⬇️
     const defaultHeader = {
       accept: "application/json",
     };
 
-    const controller = new AbortController();
+    const controller = new AbortController(); //<-- Esto es un controllador para abortar el fetch
     options.signal = controller.signal;
 
     options.method = options.method || "GET";
@@ -12,10 +13,10 @@ export const helpHttp = () => {
       ? { ...defaultHeader, ...options.headers }
       : defaultHeader;
 
-    options.body = JSON.stringify(options.body) || false;
-    if (!options.body) delete options.body;
+    options.body = JSON.stringify(options.body) || false; //<-- El body no puede ser falso o vacio
+    if (!options.body) delete options.body; //pero se hace para poder eliminarlo cuando no esté
 
-    console.log(options);
+    //console.log(options);
     setTimeout(() => controller.abort(), 3000);
 
     return fetch(endpoint, options)
