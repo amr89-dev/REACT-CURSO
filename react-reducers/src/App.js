@@ -1,13 +1,13 @@
 import Counter from "./components/Counter";
 import CounterMejorado from "./components/CounterMejorado";
-import ShoppingCar from "./components/ShoppingCar";
+import ShoppingCart from "./components/ShoppingCart";
 
 function App() {
   return (
     <div>
       <h2>UseReducer</h2>
       <hr />
-      <ShoppingCar />
+      <ShoppingCart />
       <hr />
       <CounterMejorado />
       <hr />
