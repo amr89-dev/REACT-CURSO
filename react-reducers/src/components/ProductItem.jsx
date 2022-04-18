@@ -1,12 +1,12 @@
 import React from "react";
 
 const ProductItem = ({ data, addToCart }) => {
-  const { id, product, price } = data;
-  console.log(id, product, price);
+  const { id, name, price } = data;
+
   return (
-    <div>
-      <h4>{product}</h4>
-      <h5>{price}</h5>
+    <div style={{ border: "thin solid green", padding: "1rem" }}>
+      <h4>{name}</h4>
+      <h5>${price}.00</h5>
       <button onClick={() => addToCart(id)}>Agregar</button>
     </div>
   );
